@@ -1,5 +1,5 @@
 import api from './api';
-const API_URL = "http://192.168.56.1:3000";
+const API_URL = "http://localhost:3000";
 
 
 export const editarUsuario = async (registro,id) => {
