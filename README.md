@@ -15,8 +15,9 @@ Antes de comenzar, asegúrate de contar con lo siguiente:
 
 - **Navegador web** moderno (Google Chrome, Mozilla Firefox, etc.).
 - Conexión a internet para cargar y visualizar el contenido del proyecto.
-- Python instalado (opcional, para iniciar un servidor local).
+- Node.js instalado (para instalar todas las dependencias).
 - Opción de emular dispositivos móviles si deseas probar la experiencia en un entorno móvil.
+- Motor de bases de datos MySQL. 
 
 ## Instalación y Ejecución
 Sigue estos pasos para descargar y ejecutar el proyecto en tu entorno local:
@@ -26,27 +27,62 @@ Sigue estos pasos para descargar y ejecutar el proyecto en tu entorno local:
    git clone https://github.com/MapacheMediano/Proyecto-Final-Moviles.git
    ```
 
-2. **Accede a los archivos web**:
-   - Navega hasta la carpeta principal del proyecto donde se encuentran los archivos web.
+2. **Cargar base de datos del proyecto**:
+   - Navega hasta la carpeta principal del proyecto, accede a la carpeta /OnToy/db/.
+   - Se econtrara el archivo bd.sql que es el script para cargar la base de datos.
+   - Abrir este script con la interfaz de MySQL Workbench.
+   - Ejecutar el script.
 
-3. **Ejecuta un servidor local** (opcional):
-   - Si tienes Python instalado, puedes iniciar un servidor local ejecutando este comando en la terminal dentro de la carpeta del proyecto:
+3. **Agregar archivo .env** (opcional):
+   - Navegar en las carpetas a la ruta /OnToy/.
+   - Agregar un archivo .env
+   - Dentro de este archivo colocar los siguientes parametros de acuerdo a sus especificaciones.
+   ```bash
+      PORT = 3000
+      DB_HOST = localhost
+      DB_USER = root
+      DB_PASSWORD = n0m310
+      JWTSECRET = secretosecretoso
+      DB_NAME = ontoy_db
+   ```
+
+   - Para el caso de DB_USER y DB_PASSWORD, debera de colocar las credenciales correspondientes a su gestor de bases de datos, donde creo la base de datos del proyecto.
+
+4. **Correr Backend del proyecto:
+   - Dirigirse a la carpeta del backend del proyecto ubicada en /OnToy/.
+   - Abrir una terminal cmd o de algun ID como Visual Studio Code ubicandonos en la ruta ya mencionada.
+   - Ingresar el siguiente comando para instalar todas las dependencias:
      ```bash
-     python -m http.server 8000
+        npm i
      ```
-   - Luego, abre tu navegador y accede a: `http://localhost:8000`.
+   - Posteriormente ejecutar el comando :
+   ```bash
+        npm start
+   ```
+   - Con esto ya estara corriendo el servidor en nuestro localhost en el puerto 3000. 
 
-4. **Abre directamente los archivos** (alternativa):
-   - Si no deseas usar un servidor local, abre directamente el archivo `index.html` en tu navegador. Nota: algunas características pueden no funcionar debido a restricciones de seguridad del navegador.
-
-5. **Visualiza el modelo 3D**:
-   - Interactúa con el modelo desde el navegador.
-   - Para probar la experiencia móvil, utiliza las herramientas de desarrollo del navegador (F12) y selecciona un dispositivo móvil en el emulador.
+5. **Correr Frontend del proyecto:
+   - Dirigirse a la carpeta del backend del proyecto ubicada en /ontoy2.0/OntoyReactWeb/.
+   - Abrir una terminal cmd o de algun ID como Visual Studio Code ubicandonos en la ruta ya mencionada.
+   - Ingresar el siguiente comando para instalar todas las dependencias:
+     ```bash
+        npm i
+     ```
+   - Posteriormente ejecutar el comando :
+   ```bash
+        npm rund dev
+   ```
+   - Con esto ya estara corriendo nuestra aplicación en localhost en el puerto 5173. 
 
 ## Uso
-1. Abre el navegador y accede a la URL local donde se ejecuta el proyecto (o abre el archivo HTML directamente).
-2. Interactúa con el modelo 3D navegando y explorando la interfaz.
-3. Para emular un dispositivo móvil, utiliza las herramientas de desarrollo del navegador.
+1. Abre el navegador y accede a la URL http://localhost:5173/.
+2. Navegar en la aplicación para poder registrarse
+3. Una vez registrado, iniciar sesión.
+4. Dirigirse a la pagina del Mapa, el enlace se encuentra en la barra de navegación.
+5. Interactuar con el mapa de la ESCOM.
+6. Generar alguna ruta que desea, a partir de un salon origen y uno destino.
+7. Nota: No es posible generar todas las rutas, debido a que no estan cargados todos los nodos en la BD.
+8. Una ruta de prueba podria se del salon 1014 a Palapas IA.
 
 ## Estructura del Proyecto
 - **`/`**: Carpeta raíz que contiene los archivos HTML, CSS, y JavaScript del proyecto.
