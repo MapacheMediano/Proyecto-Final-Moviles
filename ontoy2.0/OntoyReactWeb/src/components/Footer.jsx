@@ -47,7 +47,7 @@ const Footer = () => {
                                 Desarrolladores
                             </h6>
                             <p>
-                                <a href="#!" className="text-reset">Armando</a>
+                                <a href="#!" className="text-reset">Mario</a>
                             </p>
                             <p>
                                 <a href="#!" className="text-reset">Luis</a>
@@ -56,10 +56,10 @@ const Footer = () => {
                                 <a href="#!" className="text-reset">Uri</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">Joshua</a>
+                                <a href="#!" className="text-reset">Joel</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">Josue</a>
+                                <a href="#!" className="text-reset">Leon</a>
                             </p>
                         </div>
 
