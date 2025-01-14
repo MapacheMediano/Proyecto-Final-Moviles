@@ -1,0 +1,30 @@
+.landing{
+
+
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/src/assets/img/letrasESCOM.JPG'); /* URL de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el header */
+    background-position: center; /* Centra la imagen de fondo */
+    color: #fff;
+}
+
+.chart-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    background-color: #0e1a2384;
+    padding: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
